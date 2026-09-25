@@ -227,25 +227,3 @@ Needs testing (on device)
 
 ### Current Status
 Needs testing — installed; manual on-device test of the flows pending (phone locked).
-
----
-
-## Entry 5 — Own git repository and first push
-
-### Prompt / Request
-> "Agora commit e dê push para esse git: git remote add origin https://github.com/Talitavit/todolist-flutter.git"
-
-### Decision Summary
-- `todolist-flutter/` gets its **own git repository** (`git init -b main`), separate
-  from the parent Kotlin repo, because the remote is a dedicated
-  `todolist-flutter` GitHub repo.
-- Committed: sources, Android config, tests, `pubspec.lock` (apps should pin
-  dependency versions) and this log. Excluded by the generated `.gitignore`s:
-  `build/`, `.dart_tool/`, `.idea/`, `android/local.properties` (machine-specific SDK paths).
-
-### Actions Performed
-- `git init -b main`, `git remote add origin https://github.com/Talitavit/todolist-flutter.git`,
-  initial commit, `git push -u origin main`.
-
-### Current Status
-Completed
